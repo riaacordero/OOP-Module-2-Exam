@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/splash_screen.dart';
+import 'package:my_app/login.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +14,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SplashScreen(),
+      home: Login(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
