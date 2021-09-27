@@ -14,7 +14,7 @@ class Login extends StatelessWidget {
               maxWidth: MediaQuery.of(context).size.width,
             ),
             decoration: BoxDecoration(
-              color: Colors.blue[800],
+              color: Colors.blue,
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
@@ -29,6 +29,7 @@ class Login extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.end,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          // <INSERT USER IMAGE HERE>
                           Text("Login",
                               style: TextStyle(
                                 color: Colors.white,
@@ -40,7 +41,7 @@ class Login extends StatelessWidget {
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 20,
-                                  fontWeight: FontWeight.w200
+                                  fontWeight: FontWeight.w300
                               )
                           )
                         ],
