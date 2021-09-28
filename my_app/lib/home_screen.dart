@@ -44,20 +44,21 @@ class HomeScreen extends StatelessWidget {
                 ),
                 Container(
                     height: 199,
-                    // child: ListView.builder(
-                    //   padding: EdgeInsets.only(left: 16, right: 6),
-                    //   scrollDirection: Axis.horizontal,
-                    //   itemCount: accounts.length,
-                    //   itemBuilder: (context, index) {
-                    //     return Container(
-                    //       margin: EdgeInsets.only(right: 10),
-                    //       height: 199,
-                    //       width: 344,
-                    //       decoration: BoxDecoration(
-                    //         borderRadius: BorderRadius.circular(10),
-                    //         color:Colors.white),
-                    //     );
-                    //   })
+                    child: ListView.builder(
+                      padding: EdgeInsets.only(left: 16, right: 6),
+                      scrollDirection: Axis.horizontal,
+                      itemCount: accounts.length,
+                      itemBuilder: (context, index) {
+                        return Container(
+                          margin: EdgeInsets.only(right: 10),
+                          height: 199,
+                          width: 344,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color:Color(accounts[index].cardColor)),
+                          child: Text(accounts[index].user),
+                         );
+                       })
                     )
               ],
             )));
