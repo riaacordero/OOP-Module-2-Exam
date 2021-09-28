@@ -33,14 +33,14 @@ class Login extends StatelessWidget {
                           Text("Login",
                               style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 50,
-                                fontWeight: FontWeight.w800,
+                                fontSize: 30,
+                                fontWeight: FontWeight.w900,
                               )),
                           SizedBox(height: 10),
-                          Text("Welcome to Bonapay, your virtual wallet.",
+                          Text("Enter your credentials to continue.",
                               style: TextStyle(
                                   color: Colors.white,
-                                  fontSize: 20,
+                                  fontSize: 15,
                                   fontWeight: FontWeight.w300
                               )
                           )

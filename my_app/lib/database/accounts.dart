@@ -2,9 +2,8 @@ class Accounts {
   String user;
   String accNumber; //max 11 char
   double balance;
-  int cardColor;
 
-  Accounts(this.user, this.accNumber, this.balance, this.cardColor);
+  Accounts(this.user, this.accNumber, this.balance);
 }
 
 List<Accounts> accounts = accountsData
@@ -13,7 +12,6 @@ List<Accounts> accounts = accountsData
           item['user'] as String,
           item['accNumber'] as String,
           item['balance'] as double,
-          item['cardColor'] as int,
     ),).toList();
 
 var accountsData = [

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:my_app/auth.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -12,10 +13,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        textTheme: GoogleFonts.interTextTheme(
-          Theme.of(context).textTheme),
+        textTheme:
+            GoogleFonts.sourceCodeProTextTheme(Theme.of(context).textTheme),
         primarySwatch: Colors.indigo,
-        
       ),
       home: AuthScreen(),
       debugShowCheckedModeBanner: false,

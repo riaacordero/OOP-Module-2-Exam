@@ -54,7 +54,10 @@ class HomeScreen extends StatelessWidget {
                             decoration: BoxDecoration(
                               border: Border.all(width: 1, color:Colors.indigo),
                               borderRadius: BorderRadius.circular(10),
-                              color: Colors.white,
+                              gradient: LinearGradient(
+                                begin: Alignment.topLeft, end: Alignment.bottomRight,
+                                colors: <Color>[Color(0xFF3F51B5),Color(0xFF1A237E)]
+                              ),
                               boxShadow: [
                                 BoxShadow(color: Colors.grey.withOpacity(0.1),
                                 spreadRadius: 3,
@@ -67,28 +70,28 @@ class HomeScreen extends StatelessWidget {
                                   left: 30, top: 25,
                                   child: Text("ACCOUNT NUMBER", 
                                   style: TextStyle(
-                                    color: Colors.grey,
+                                    color: Colors.white,
                                     fontSize: 10
                                   )),),
                                 Positioned(
                                   left: 30, top: 40,
                                   child: Text(accounts[index].accNumber,
                                   style: TextStyle(
-                                    color: Colors.indigo[300],
+                                    color: Colors.white,
                                     fontWeight: FontWeight.w600,
                                     fontSize: 20)),),
                                 Positioned(
                                   right: 30, bottom: 45,
                                   child: Text("₱"+accounts[index].balance.toString(),
                                   style: TextStyle(
-                                    color: Colors.indigo[700],
+                                    color: Colors.white,
                                     fontWeight: FontWeight.w600,
                                     fontSize: 25)),),
                                 Positioned(
                                   right: 30, bottom: 30,
                                   child: Text("AVAILABLE BALANCE",
                                   style: TextStyle(
-                                    color: Colors.grey,
+                                    color: Colors.white,
                                     fontSize: 10)),)],
                             ),
                            );
