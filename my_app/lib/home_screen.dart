@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       Icon(
                         Icons.menu_rounded,
-                        color: Colors.blue,
+                        color: Colors.grey[400],
                         size: 50,
                       )
                     ],
@@ -28,7 +28,7 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(height: 20),
                 // HEADER
                 Padding(
-                  padding: const EdgeInsets.all(16),
+                  padding: const EdgeInsets.all(20),
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -44,20 +44,21 @@ class HomeScreen extends StatelessWidget {
                 ),
                 Container(
                     height: 199,
-                    child: ListView.builder(
-                      padding: EdgeInsets.only(left: 16, right: 6),
-                      scrollDirection: Axis.horizontal,
-                      itemCount: accounts.length,
-                      itemBuilder: (context, index) {
-                        return Container(
-                          margin: EdgeInsets.only(right: 10),
-                          height: 199,
-                          width: 344,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color:Color(accounts[index].cardColor)),
-                        );
-                      }))
+                    // child: ListView.builder(
+                    //   padding: EdgeInsets.only(left: 16, right: 6),
+                    //   scrollDirection: Axis.horizontal,
+                    //   itemCount: accounts.length,
+                    //   itemBuilder: (context, index) {
+                    //     return Container(
+                    //       margin: EdgeInsets.only(right: 10),
+                    //       height: 199,
+                    //       width: 344,
+                    //       decoration: BoxDecoration(
+                    //         borderRadius: BorderRadius.circular(10),
+                    //         color:Colors.white),
+                    //     );
+                    //   })
+                    )
               ],
             )));
   }
