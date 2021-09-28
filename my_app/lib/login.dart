@@ -14,7 +14,7 @@ class Login extends StatelessWidget {
               maxWidth: MediaQuery.of(context).size.width,
             ),
             decoration: BoxDecoration(
-              color: Colors.blue,
+              color: Colors.indigo,
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,

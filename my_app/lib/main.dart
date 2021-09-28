@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         textTheme: GoogleFonts.interTextTheme(
           Theme.of(context).textTheme),
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.indigo,
         
       ),
       home: AuthScreen(),
