@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/cards/ActionCards.dart';
+import 'package:my_app/database/actions.dart';
 import 'package:my_app/database/accounts.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -113,15 +115,16 @@ class HomeScreen extends StatelessWidget {
                   Text("Actions:",
                       style:
                           TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
-                  // Container(
-                  //   height: 100,
-                  //   child: ListView.builder(
-                  //       scrollDirection: Axis.horizontal,
-                  //       itemBuilder: (content, index) {
-                  //         return Actions();
-                  //       },
-                  //       itemCount: actions.length),
-                  // )
+                  Container(
+                      height: 100,
+                      child: ListView.builder(
+                        itemCount: actions.length,
+                        scrollDirection: Axis.horizontal,
+                        itemBuilder: (context, index) {
+                          return ActionCards(action, selected, unselected,
+                              isSelected, context);
+                        },
+                      ))
                 ],
               ),
             )));

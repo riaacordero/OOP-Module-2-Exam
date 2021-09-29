@@ -1,38 +1,32 @@
-import 'package:flutter/material.dart';
-
-class Actions extends StatefulWidget {
+class Actions {
   String action;
   String selected;
   String unselected;
-  bool isSelected;
 
-  Actions(this.action, this.selected, this.unselected, this.isSelected);
-
-  @override
-  _ActionsState createState() => _ActionsState();
+  Actions(this.action, this.selected, this.unselected);
 }
 
-class _ActionsState extends State<Actions> {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.all(16),
-      width: 125,
-      height: 125,
-      decoration: BoxDecoration(
-        boxShadow: [
-          BoxShadow(
-              color: Color(0xFF3F51B5),
-              blurRadius: 5,
-              spreadRadius: 2,
-              offset: Offset(8, 8))
-        ],
-        borderRadius: BorderRadius.circular(15),
-        color: widget.isSelected ? Color(0xFF3F51B5) : Color(0xFFFFFFF),
-      ),
-      child: Column(
-        children: [],
-      ),
-    );
-  }
-}
+List<Actions> actions = actionsData.map((item) =>
+    Actions(
+      item['action'] as String, 
+      item['selected'] as String, 
+      item['unselected'] as String
+    )).toList();
+
+var actionsData = [
+  {
+    "action": "Money\nTransfer",
+    "selected": "assets/white-money.svg",
+    "unselected": "assets/col-money.svg"
+  },
+  {
+    "action": "Bank\nWithdraw",
+    "selected": "assets/white-money.svg",
+    "unselected": "assets/col-money.svg"
+  },
+  {
+    "action": "Insight\nTracking",
+    "selected": "assets/white-money.svg",
+    "unselected": "assets/col-money.svg"
+  },
+];
