@@ -121,7 +121,12 @@ class HomeScreen extends StatelessWidget {
                         itemCount: actions.length,
                         scrollDirection: Axis.horizontal,
                         itemBuilder: (context, index) {
-                          return ActionCards(action, icon);
+                          var current;
+                          return ActionCards(
+                            action: actions[index].action,
+                            icon: actions[index].icon,
+                            isSelected: current==index,
+                            context: this);
                         },
                       ))
                 ],

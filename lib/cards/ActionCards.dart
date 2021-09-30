@@ -5,8 +5,15 @@ import 'package:my_app/home_screen.dart';
 class ActionCards extends StatefulWidget {
   final String action;
   final String icon;
+  final bool isSelected;
+  HomeScreen context;
 
-  ActionCards(this.action, this.icon);
+  ActionCards(
+      {required this.action,
+      required this.icon,
+      required this.isSelected, required this.context,
+      Key? key})
+      : super(key: key);
 
   @override
   _ActionCardsState createState() => _ActionCardsState();
@@ -16,19 +23,20 @@ class _ActionCardsState extends State<ActionCards> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(16),
+      margin: EdgeInsets.symmetric(horizontal: 4,vertical: 16),
       width: 125,
       height: 125,
       decoration: BoxDecoration(
-        boxShadow: [
-          BoxShadow(
-              color: Color(0xFF3F51B5),
-              blurRadius: 5,
-              spreadRadius: 2,
-              offset: Offset(8, 8))
-        ],
         borderRadius: BorderRadius.circular(15),
-        color: Color(0xFFFFFFF),
+        border: Border.all(color: Colors.indigo),
+        color: Colors.white,
+        // boxShadow: [
+        //   BoxShadow(
+        //       color: Colors.grey,
+        //       blurRadius: 1,
+        //       spreadRadius: 0.1,
+        //       offset: Offset(2, 2))
+        // ],
       ),
       child: Column(
         children: [
@@ -37,7 +45,8 @@ class _ActionCardsState extends State<ActionCards> {
           Text(widget.action,
               textAlign: TextAlign.center,
               style: TextStyle(
-                  color: Color(0xFF3F51B5)))
+                color: Color(0xFF3F51B5),
+                fontWeight: FontWeight.w700))
         ],
       ),
     );

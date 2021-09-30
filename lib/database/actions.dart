@@ -6,8 +6,9 @@ class Actions {
 }
 
 List<Actions> actions = actionsData
-    .map((item) => Actions(item['action'] as String, item['selected'] as String)).toList();
-
+    .map(
+        (item) => Actions(item['action'] as String, item['icon'] as String))
+    .toList();
 
 var actionsData = [
   {
@@ -19,7 +20,7 @@ var actionsData = [
     "icon": "assets/col-money.svg",
   },
   {
-    "action": "Add\nAccount",
+    "action": "Enroll\nAccount",
     "icon": "assets/col-money.svg",
   },
   {
