@@ -39,7 +39,7 @@ class _ActionCardsState extends State<ActionCards> {
         // ],
       ),
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
             SvgPicture.asset(widget.icon, height: 50, width: 50,),

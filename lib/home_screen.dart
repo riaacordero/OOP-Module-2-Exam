@@ -54,15 +54,13 @@ class HomeScreen extends StatelessWidget {
                               height: 199,
                               width: 344,
                               decoration: BoxDecoration(
-                                  border: Border.all(
-                                      width: 1, color: Colors.indigo),
                                   borderRadius: BorderRadius.circular(10),
                                   gradient: LinearGradient(
                                       begin: Alignment.topLeft,
                                       end: Alignment.bottomRight,
                                       colors: <Color>[
-                                        Color(0xFF3F51B5),
-                                        Color(0xFF1A237E)
+                                        Color(0xFF715FE0),
+                                        Color(0xFF792D3D)
                                       ]),
                                   boxShadow: [
                                     BoxShadow(
@@ -111,29 +109,59 @@ class HomeScreen extends StatelessWidget {
                               ),
                             );
                           })),
-                  SizedBox(height: 20),
+                  SizedBox(height: 30),
                   Text("Actions:",
                       style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.w800)),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
-                          height: 150,
+                          height: 175,
                           child: ListView.builder(
                             itemCount: actions.length,
                             scrollDirection: Axis.horizontal,
                             itemBuilder: (context, index) {
                               var current;
-                              return ActionCards(
-                                action: actions[index].action,
-                                icon: actions[index].icon,
-                                isSelected: current==index,
-                                context: this);
+                              return GestureDetector(
+                                // onTap: () {
+                                //   Navigator.push(
+                                //       context,
+                                //       MaterialPageRoute(
+                                //           builder: (context) => actions[index].navigateTo));
+                                // },
+                                child: ActionCards(
+                                    action: actions[index].action,
+                                    icon: actions[index].icon,
+                                    isSelected: current == index,
+                                    context: this),
+                              );
                             },
                           )),
                     ],
+                  ),
+                  Container(
+                    width: double.infinity,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 15),
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => HomeScreen()));
+                        },
+                        child: Text("View Transaction History",
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 16)),
+                        style: ButtonStyle(
+                            shape: MaterialStateProperty.all<
+                                    RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(18)))),
+                      ),
+                    ),
                   )
                 ],
               ),
