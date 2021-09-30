@@ -115,20 +115,26 @@ class HomeScreen extends StatelessWidget {
                   Text("Actions:",
                       style:
                           TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
-                  Container(
-                      height: 100,
-                      child: ListView.builder(
-                        itemCount: actions.length,
-                        scrollDirection: Axis.horizontal,
-                        itemBuilder: (context, index) {
-                          var current;
-                          return ActionCards(
-                            action: actions[index].action,
-                            icon: actions[index].icon,
-                            isSelected: current==index,
-                            context: this);
-                        },
-                      ))
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                          height: 150,
+                          child: ListView.builder(
+                            itemCount: actions.length,
+                            scrollDirection: Axis.horizontal,
+                            itemBuilder: (context, index) {
+                              var current;
+                              return ActionCards(
+                                action: actions[index].action,
+                                icon: actions[index].icon,
+                                isSelected: current==index,
+                                context: this);
+                            },
+                          )),
+                    ],
+                  )
                 ],
               ),
             )));

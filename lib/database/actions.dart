@@ -12,11 +12,11 @@ List<Actions> actions = actionsData
 
 var actionsData = [
   {
-    "action": "Money\nTransfer",
+    "action": "Fund\nTransfer",
     "icon": "assets/col-money.svg",
   },
   {
-    "action": "Withdraw",
+    "action": "Cash\nWithdraw",
     "icon": "assets/col-money.svg",
   },
   {

@@ -27,7 +27,7 @@ class _ActionCardsState extends State<ActionCards> {
       width: 125,
       height: 125,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(15),
+        borderRadius: BorderRadius.circular(8),
         border: Border.all(color: Colors.indigo),
         color: Colors.white,
         // boxShadow: [
@@ -38,16 +38,19 @@ class _ActionCardsState extends State<ActionCards> {
         //       offset: Offset(2, 2))
         // ],
       ),
-      child: Column(
-        children: [
-          SvgPicture.asset(widget.icon),
-          SizedBox(height: 9),
-          Text(widget.action,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Color(0xFF3F51B5),
-                fontWeight: FontWeight.w700))
-        ],
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            SvgPicture.asset(widget.icon, height: 50, width: 50,),
+            SizedBox(height: 9),
+            Text(widget.action,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Color(0xFF3F51B5),
+                  fontWeight: FontWeight.w700))
+          ],
+        ),
       ),
     );
   }
