@@ -1,32 +1,29 @@
 class Actions {
   String action;
-  String selected;
-  String unselected;
+  String icon;
 
-  Actions(this.action, this.selected, this.unselected);
+  Actions(this.action, this.icon);
 }
 
-List<Actions> actions = actionsData.map((item) =>
-    Actions(
-      item['action'] as String, 
-      item['selected'] as String, 
-      item['unselected'] as String
-    )).toList();
+List<Actions> actions = actionsData
+    .map((item) => Actions(item['action'] as String, item['selected'] as String)).toList();
+
 
 var actionsData = [
   {
     "action": "Money\nTransfer",
-    "selected": "assets/white-money.svg",
-    "unselected": "assets/col-money.svg"
+    "icon": "assets/col-money.svg",
   },
   {
-    "action": "Bank\nWithdraw",
-    "selected": "assets/white-money.svg",
-    "unselected": "assets/col-money.svg"
+    "action": "Withdraw",
+    "icon": "assets/col-money.svg",
   },
   {
-    "action": "Insight\nTracking",
-    "selected": "assets/white-money.svg",
-    "unselected": "assets/col-money.svg"
+    "action": "Add\nAccount",
+    "icon": "assets/col-money.svg",
+  },
+  {
+    "action": "Transaction\nHistory",
+    "icon": "assets/col-money.svg",
   },
 ];
