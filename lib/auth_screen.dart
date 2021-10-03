@@ -23,15 +23,20 @@ class AuthScreen extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) =>
-                                    Login()));
+                                builder: (context) => Login()
+                            )
+                        );
                       },
-                  child: Text(
-                    "Login",
-                    style: TextStyle(
-                        color: Colors.white, fontSize: 16),
-                  )),
-              ))
+                      child: Text(
+                        "Login",
+                        style: TextStyle(
+                            color: Colors.white, 
+                            fontSize: 16
+                        ),
+                      )
+                  ),
+              )
+            )
             ],
           ),
         )
