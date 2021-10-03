@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/cards/ActionCards.dart';
+import 'package:my_app/cards/action_card.dart';
 import 'package:my_app/database/actions.dart';
 import 'package:my_app/database/accounts.dart';
 
@@ -35,13 +35,19 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         Text("Welcome back,",
                             style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.w500)),
+                                fontSize: 18, 
+                                fontWeight: FontWeight.w500
+                            )
+                        ),
                         Text("Johnny Bravo",
                             style: TextStyle(
                                 color: Colors.indigo[700],
                                 fontSize: 30,
-                                fontWeight: FontWeight.w900))
-                      ]),
+                                fontWeight: FontWeight.w900
+                            )
+                        )
+                      ]
+                  ),
                   SizedBox(height: 20),
                   Container(
                       height: 199,
@@ -61,14 +67,17 @@ class HomeScreen extends StatelessWidget {
                                       colors: <Color>[
                                         Color(0xFF715FE0),
                                         Color(0xFF792D3D)
-                                      ]),
+                                      ]
+                                  ),
                                   boxShadow: [
                                     BoxShadow(
                                         color: Colors.grey.withOpacity(0.1),
                                         spreadRadius: 3,
                                         blurRadius: 1,
-                                        offset: Offset(0, 5))
-                                  ]),
+                                        offset: Offset(0, 5)
+                                    )
+                                  ]
+                              ),
                               child: Stack(
                                 children: [
                                   Positioned(
@@ -76,7 +85,10 @@ class HomeScreen extends StatelessWidget {
                                     top: 25,
                                     child: Text("ACCOUNT NUMBER",
                                         style: TextStyle(
-                                            color: Colors.white, fontSize: 10)),
+                                            color: Colors.white, 
+                                            fontSize: 10
+                                        )
+                                    ),
                                   ),
                                   Positioned(
                                     left: 30,
@@ -85,7 +97,9 @@ class HomeScreen extends StatelessWidget {
                                         style: TextStyle(
                                             color: Colors.white,
                                             fontWeight: FontWeight.w600,
-                                            fontSize: 20)),
+                                            fontSize: 20
+                                        )
+                                    ),
                                   ),
                                   Positioned(
                                     right: 30,
@@ -96,23 +110,33 @@ class HomeScreen extends StatelessWidget {
                                         style: TextStyle(
                                             color: Colors.white,
                                             fontWeight: FontWeight.w600,
-                                            fontSize: 25)),
+                                            fontSize: 25
+                                        )
+                                    ),
                                   ),
                                   Positioned(
                                     right: 30,
                                     bottom: 30,
                                     child: Text("AVAILABLE BALANCE",
                                         style: TextStyle(
-                                            color: Colors.white, fontSize: 10)),
+                                            color: Colors.white, 
+                                            fontSize: 10
+                                        )
+                                    ),
                                   )
                                 ],
                               ),
                             );
-                          })),
+                          }
+                      )
+                  ),
                   SizedBox(height: 30),
                   Text("Actions:",
-                      style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.w800)),
+                      style: TextStyle(
+                        fontSize: 18, 
+                        fontWeight: FontWeight.w800
+                      )
+                  ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -131,14 +155,15 @@ class HomeScreen extends StatelessWidget {
                                 //       MaterialPageRoute(
                                 //           builder: (context) => actions[index].navigateTo));
                                 // },
-                                child: ActionCards(
+                                child: ActionCard(
                                     action: actions[index].action,
                                     icon: actions[index].icon,
                                     isSelected: current == index,
                                     context: this),
                               );
                             },
-                          )),
+                          )
+                      ),
                     ],
                   ),
                   Container(
@@ -150,21 +175,31 @@ class HomeScreen extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => HomeScreen()));
+                                  builder: (context) => HomeScreen()
+                              )
+                          );
                         },
                         child: Text("View Transaction History",
-                            style:
-                                TextStyle(color: Colors.white, fontSize: 16)),
+                            style: TextStyle(
+                              color: Colors.white, 
+                              fontSize: 16
+                            )
+                        ),
                         style: ButtonStyle(
                             shape: MaterialStateProperty.all<
                                     RoundedRectangleBorder>(
                                 RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(18)))),
+                                    borderRadius: BorderRadius.circular(18)
+                                )
+                            )
+                        ),
                       ),
                     ),
                   )
                 ],
               ),
-            )));
+            )
+        )
+    );
   }
 }

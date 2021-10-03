@@ -12,7 +12,8 @@ List<Accounts> accounts = accountsData
           item['user'] as String,
           item['accNumber'] as String,
           item['balance'] as double,
-    ),).toList();
+      ),
+    ).toList();
 
 var accountsData = [
   {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/login.dart';
+import 'package:my_app/login_screen.dart';
 
 class AuthScreen extends StatelessWidget {
   const AuthScreen({ Key? key }) : super(key: key);
@@ -23,15 +23,20 @@ class AuthScreen extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) =>
-                                    Login()));
+                                builder: (context) => Login()
+                            )
+                        );
                       },
-                  child: Text(
-                    "Login",
-                    style: TextStyle(
-                        color: Colors.white, fontSize: 16),
-                  )),
-              ))
+                      child: Text(
+                        "Login",
+                        style: TextStyle(
+                            color: Colors.white, 
+                            fontSize: 16
+                        ),
+                      )
+                  ),
+              )
+            )
             ],
           ),
         )

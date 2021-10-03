@@ -7,8 +7,12 @@ class Actions {
 }
 
 List<Actions> actions = actionsData
-    .map((item) => Actions(item['action'] as String, item['icon'] as String,
-        item['navigateTo'] as String))
+    .map((item) => Actions(
+            item['action'] as String, 
+            item['icon'] as String,
+            item['navigateTo'] as String
+          )
+    )
     .toList();
 
 var actionsData = [
