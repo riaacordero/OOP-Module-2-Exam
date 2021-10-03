@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_app/home_screen.dart';
 
-class ActionCards extends StatefulWidget {
+class ActionCard extends StatefulWidget {
   final String action;
   final String icon;
   final bool isSelected;
   HomeScreen context;
 
-  ActionCards(
+  ActionCard(
       {required this.action,
       required this.icon,
       required this.isSelected, required this.context,
@@ -16,10 +16,10 @@ class ActionCards extends StatefulWidget {
       : super(key: key);
 
   @override
-  _ActionCardsState createState() => _ActionCardsState();
+  _ActionCardState createState() => _ActionCardState();
 }
 
-class _ActionCardsState extends State<ActionCards> {
+class _ActionCardState extends State<ActionCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
