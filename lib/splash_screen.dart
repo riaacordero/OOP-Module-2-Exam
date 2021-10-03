@@ -18,12 +18,10 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.indigo,
       body: Center(
         child: Container(
-          child: Text(
-            'Splash Screen',
-            style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
-          ),
+          child: Image.asset('assets/wizbank-icon-clear.png', scale: 20),
         ),
       ),
     );
