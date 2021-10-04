@@ -68,7 +68,6 @@ class LoginScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         TextField(
-                          keyboardType: TextInputType.emailAddress,
                           decoration: InputDecoration(
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10),
@@ -76,7 +75,7 @@ class LoginScreen extends StatelessWidget {
                               ),
                               filled: true,
                               fillColor: Colors.white,
-                              hintText: "Email Address",
+                              hintText: "Username",
                               prefixIcon:
                                   Icon(Icons.email, color: Colors.indigo[200])
                           ),
