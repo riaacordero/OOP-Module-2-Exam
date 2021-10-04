@@ -17,10 +17,26 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   _navigateToHome() async {
-    await Future.delayed(Duration(milliseconds: 3000), () {});
+    await Future.delayed(Duration(milliseconds: 2000), () {});
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => AuthScreen()),
+      PageRouteBuilder(
+          transitionDuration: Duration(milliseconds: 850),
+          transitionsBuilder: (BuildContext context,
+              Animation<double> animation,
+              Animation<double> secAnimation,
+              Widget child) {
+            animation =
+                CurvedAnimation(parent: animation, curve: Curves.easeInOut);
+            return FadeTransition(
+              opacity: animation,
+              child: child,
+            );
+          },
+          pageBuilder: (BuildContext context, Animation<double> animation,
+              Animation<double> secAnimation) {
+            return AuthScreen();
+          }),
     );
   }
 
