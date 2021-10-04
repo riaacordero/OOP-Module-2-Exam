@@ -13,6 +13,15 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
+    _navigateToHome();
+  }
+
+  _navigateToHome() async {
+    await Future.delayed(Duration(milliseconds: 3000), () {});
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => AuthScreen()),
+    );
   }
 
   @override
@@ -20,8 +29,26 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: Colors.indigo,
       body: Center(
-        child: Container(
-          child: Image.asset('assets/wizbank-icon-clear.png', scale: 20),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              child: Image.asset(
+                'assets/wizbank-icon-clear.png',
+                scale: 20,
+              ),
+            ),
+            Container(
+              alignment: Alignment.bottomCenter,
+              child: Text(
+                'WIZBANK',
+                style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
+              ),
+            )
+          ],
         ),
       ),
     );
