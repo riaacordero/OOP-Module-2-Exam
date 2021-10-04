@@ -12,6 +12,9 @@ class UnderConstructionScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
+              child: Image.asset('assets/under-construction.png'),
+            ),
+            Container(
               alignment: Alignment.bottomCenter,
               child: Text(
                 'Under Construction',
