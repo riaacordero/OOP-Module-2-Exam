@@ -73,82 +73,95 @@ class LoginScreen extends StatelessWidget {
 class LoginForm extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return LoginFormState();
   }
 }
 
 class LoginFormState extends State<LoginForm> {
+  final _formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
-    return Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            TextField(
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      borderSide: BorderSide.none
-                  ),
-                  filled: true,
-                  fillColor: Colors.white,
-                  hintText: "Username",
-                  prefixIcon:
-                      Icon(Icons.email, color: Colors.indigo[200])
-              ),
-            ),
-            SizedBox(height: 10),
-            TextField(
-                obscureText: true,
+    return Form(
+      key: _formKey,
+      child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              TextFormField(
                 decoration: InputDecoration(
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      borderSide: BorderSide.none,
+                        borderRadius: BorderRadius.circular(10),
+                        borderSide: BorderSide.none
                     ),
                     filled: true,
                     fillColor: Colors.white,
-                    hintText: "Password",
-                    prefixIcon:
-                        Icon(Icons.lock, color: Colors.indigo[200])
-                )
-            ),
-            SizedBox(height: 10),
-            Container(
-                width: double.infinity,
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 15),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => HomeScreen()
-                          )
-                      );
-                    },
-                    child: Text("Login",
-                        style: TextStyle(
-                            color: Colors.white, 
-                            fontSize: 16
-                        )
-                    ),
-                    style: ButtonStyle(
-                        shape: MaterialStateProperty.all<
-                                RoundedRectangleBorder>(
-                            RoundedRectangleBorder(
-                                borderRadius:
-                                    BorderRadius.circular(18)
-                            )
-                        )
-                    ),
+                    hintText: "Username",
+                    prefixIcon: Icon(Icons.email, color: Colors.indigo[200]),
+                    errorStyle: TextStyle(height: 0)
+                ),
+                validator: (value) => value == "admin" ? null : ''
+              ),
+              SizedBox(height: 10),
+              TextFormField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                        borderSide: BorderSide.none,
+                      ),
+                      filled: true,
+                      fillColor: Colors.white,
+                      hintText: "Password",
+                      prefixIcon: Icon(Icons.lock, color: Colors.indigo[200]),
+                      errorStyle: TextStyle(height: 0)
                   ),
-                )
-            )
-          ],
+                  validator: (value) => value == "admin" ? null : ''
+              ),
+              SizedBox(height: 10),
+              Container(
+                  width: double.infinity,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 15),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        if (_formKey.currentState!.validate()) {
+                          print("Hello I'm here");
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => HomeScreen()
+                              )
+                          );
+                        } else {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(content: Text('Error'))
+                          );
+                        }
+                      },
+                      child: Text("Login",
+                          style: TextStyle(
+                              color: Colors.white, 
+                              fontSize: 16
+                          )
+                      ),
+                      style: ButtonStyle(
+                          shape: MaterialStateProperty.all<
+                                  RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                                  borderRadius:
+                                      BorderRadius.circular(18)
+                              )
+                          )
+                      ),
+                    ),
+                  )
+              )
+            ],
+          ),
         ),
-      );
+    );
   }
 }
