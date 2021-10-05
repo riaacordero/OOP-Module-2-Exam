@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_app/cards/action_card.dart';
 import 'package:my_app/database/actions.dart';
 import 'package:my_app/database/accounts.dart';
-import 'package:my_app/under_construction_screen.dart';
+import 'package:my_app/screens/under_construction_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);

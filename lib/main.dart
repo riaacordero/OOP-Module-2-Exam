@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:my_app/splash_screen.dart';
+import 'package:my_app/screens/splash_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Whizbank',
       theme: ThemeData(
         textTheme:
             GoogleFonts.sourceCodeProTextTheme(Theme.of(context).textTheme),

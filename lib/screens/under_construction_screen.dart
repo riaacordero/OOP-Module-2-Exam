@@ -5,7 +5,7 @@ class UnderConstructionScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Row toolbar = new Row(
+    Row(
       children: <Widget>[new Icon(Icons.arrow_back)],
     );
 
