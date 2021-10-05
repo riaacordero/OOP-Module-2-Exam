@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_app/cards/action_card.dart';
 import 'package:my_app/database/actions.dart';
 import 'package:my_app/database/accounts.dart';
+import 'package:my_app/under_construction_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -60,7 +61,7 @@ class HomeScreen extends StatelessWidget {
                               height: 199,
                               width: 344,
                               decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
+                                  borderRadius: BorderRadius.circular(30),
                                   gradient: LinearGradient(
                                       begin: Alignment.topLeft,
                                       end: Alignment.bottomRight,
@@ -177,7 +178,7 @@ class HomeScreen extends StatelessWidget {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => HomeScreen()
+                                      builder: (context) => UnderConstructionScreen()
                                   )
                               );
                             },

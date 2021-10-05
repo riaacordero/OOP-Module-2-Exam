@@ -11,38 +11,43 @@ class UnderConstructionScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: new AppBar(
-        title: toolbar,
         elevation: 0,
       ),
       backgroundColor: Colors.indigo,
       body: Center(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            Container(
-              child: Image.asset('assets/under-construction.png',
-                  height: 500, width: 500),
-            ),
-            Container(
-              alignment: Alignment.bottomCenter,
-              child: Text(
-                'Under Construction',
-                style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white),
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              Container(
+                child: Image.asset('assets/under-construction.png',
+                    height: 500, width: 500),
               ),
-            ),
-            Container(
-              alignment: Alignment.bottomCenter,
-              child: Text(
-                'Lorem Ipsum',
-                style: TextStyle(fontSize: 20, color: Colors.white),
+              Container(
+                alignment: Alignment.bottomCenter,
+                child: Text(
+                  '</Beep boop!>',
+                  style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white),
+                  textAlign: TextAlign.center
+                ),
               ),
-            ),
-          ],
+              SizedBox(height: 15,),
+              Container(
+                alignment: Alignment.bottomCenter,
+                child: Text(
+                  'This feature is under construction.'+
+                  '\n We apologize for this inconvenience and'+
+                  '\nthank you for your support!',
+                  style: TextStyle(fontSize: 13, color: Colors.white),textAlign: TextAlign.center,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
