@@ -54,16 +54,16 @@ class _SplashScreenState extends State<SplashScreen> {
                 scale: 20,
               ),
             ),
-            Container(
-              alignment: Alignment.bottomCenter,
-              child: Text(
-                'WIZBANK',
-                style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white),
-              ),
-            )
+            // Container(
+            //   alignment: Alignment.bottomCenter,
+            //   child: Text(
+            //     'WIZBANK',
+            //     style: TextStyle(
+            //         fontSize: 20,
+            //         fontWeight: FontWeight.bold,
+            //         color: Colors.white),
+            //   ),
+            // )
           ],
         ),
       ),
