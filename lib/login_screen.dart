@@ -125,7 +125,7 @@ class LoginFormState extends State<LoginForm> {
                                 );
                               } else {
                                 ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(content: Text('Error'))
+                                  SnackBar(content: Text('Invalid credentials. Please try again!'))
                                 );
                               }
                             },
