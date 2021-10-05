@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:my_app/screens/splash_screen.dart';
+import 'package:whizbank/screens/splash_screen.dart';
 
 void main() {
   runApp(MyApp());
