@@ -1,39 +1,27 @@
+import 'package:flutter/widgets.dart';
+import 'package:whizbank/screens/login_screen.dart';
+import 'package:whizbank/screens/under_construction_screen.dart';
+
 class Actions {
   String action;
   String icon;
-  String navigateTo;
+  Widget Function () navigateTo;
 
   Actions(this.action, this.icon, this.navigateTo);
 }
 
-List<Actions> actions = actionsData
-    .map((item) => Actions(
-            item['action'] as String, 
-            item['icon'] as String,
-            item['navigateTo'] as String
-          )
-    )
-    .toList();
 
-var actionsData = [
-  {
-    "action": "Fund\nTransfer",
-    "icon": "assets/col-transfer.svg",
-    "navigateTo": "HomeScreen()"
-  },
-  {
-    "action": "Cash\nWithdraw",
-    "icon": "assets/col-money.svg",
-    "navigateTo": "HomeScreen()"
-  },
-  {
-    "action": "Enroll\nAccount",
-    "icon": "assets/col-enroll.svg",
-    "navigateTo": "HomeScreen()"
-  },
-  {
-    "action": "Pay\nBills",
-    "icon": "assets/col-bills.svg",
-    "navigateTo": "HomeScreen()"
-  }
+var actions = [
+  Actions(
+    "Fund\nTransfer", "assets/col-transfer.svg", () => UnderConstructionScreen()),
+
+  Actions(
+    "Cash\nWithdraw", "assets/col-money.svg", () => LoginScreen()),
+
+  Actions(
+    "Enroll\nAccount", "assets/col-enroll.svg", () => UnderConstructionScreen()),
+
+  Actions(
+    "Pay\nBills", "assets/col-bills.svg", () => UnderConstructionScreen()),
+
 ];

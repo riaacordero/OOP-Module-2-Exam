@@ -150,12 +150,12 @@ class HomeScreen extends StatelessWidget {
                             itemBuilder: (context, index) {
                               var current;
                               return GestureDetector(
-                                // onTap: () {
-                                //   Navigator.push(
-                                //       context,
-                                //       MaterialPageRoute(
-                                //           builder: (context) => actions[index].navigateTo));
-                                // },
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => actions[index].navigateTo()));
+                                },
                                 child: ActionCard(
                                     action: actions[index].action,
                                     icon: actions[index].icon,
