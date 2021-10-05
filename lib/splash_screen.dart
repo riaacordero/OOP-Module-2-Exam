@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:my_app/auth_screen.dart';
+import 'package:my_app/login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -35,7 +35,7 @@ class _SplashScreenState extends State<SplashScreen> {
           },
           pageBuilder: (BuildContext context, Animation<double> animation,
               Animation<double> secAnimation) {
-            return AuthScreen();
+            return LoginScreen();
           }),
     );
   }
