@@ -66,7 +66,7 @@ class HomeScreen extends StatelessWidget {
                                       end: Alignment.bottomRight,
                                       colors: <Color>[
                                         Color(0xFF715FE0),
-                                        Color(0xFF792D3D)
+                                        Color(0xFF00669F)
                                       ]
                                   ),
                                   boxShadow: [
@@ -139,7 +139,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(
                           height: 175,
@@ -166,35 +166,39 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Container(
-                    width: double.infinity,
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 15),
-                      child: ElevatedButton(
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => HomeScreen()
-                              )
-                          );
-                        },
-                        child: Text("View Transaction History",
-                            style: TextStyle(
-                              color: Colors.white, 
-                              fontSize: 16
-                            )
-                        ),
-                        style: ButtonStyle(
-                            shape: MaterialStateProperty.all<
-                                    RoundedRectangleBorder>(
-                                RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(18)
+                  Column(
+                    children: [
+                      Container(
+                        width: double.infinity,
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 15),
+                          child: ElevatedButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => HomeScreen()
+                                  )
+                              );
+                            },
+                            child: Text("View Transaction History",
+                                style: TextStyle(
+                                  color: Colors.white, 
+                                  fontSize: 16
                                 )
-                            )
+                            ),
+                            style: ButtonStyle(
+                                shape: MaterialStateProperty.all<
+                                        RoundedRectangleBorder>(
+                                    RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(18)
+                                    )
+                                )
+                            ),
+                          ),
                         ),
                       ),
-                    ),
+                    ],
                   )
                 ],
               ),
