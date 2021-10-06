@@ -45,7 +45,8 @@ class _ActionCardState extends State<ActionCard> {
         child: Column(
           children: [
             SvgPicture.asset(widget.icon, height: 50, width: 50,),
-            SizedBox(height: 9),
+            Padding(
+                padding: EdgeInsets.symmetric(vertical: 10)),
             Text(widget.action,
                 textAlign: TextAlign.center,
                 style: TextStyle(

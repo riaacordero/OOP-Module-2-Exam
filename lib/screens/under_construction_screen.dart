@@ -36,7 +36,8 @@ class UnderConstructionScreen extends StatelessWidget {
                   textAlign: TextAlign.center
                 ),
               ),
-              SizedBox(height: 15,),
+              Padding(
+                  padding: EdgeInsets.symmetric(vertical: 10)),
               Container(
                 alignment: Alignment.bottomCenter,
                 child: Text(

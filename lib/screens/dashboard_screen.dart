@@ -29,7 +29,8 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(height: 20),
+                  Padding(
+                    padding: EdgeInsets.symmetric(vertical: 10)),
                   // HEADER
                   Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -49,7 +50,8 @@ class HomeScreen extends StatelessWidget {
                         )
                       ]
                   ),
-                  SizedBox(height: 20),
+                  Padding(
+                    padding: EdgeInsets.symmetric(vertical: 10)),
                   Container(
                       height: 199,
                       child: ListView.builder(
@@ -131,7 +133,8 @@ class HomeScreen extends StatelessWidget {
                           }
                       )
                   ),
-                  SizedBox(height: 30),
+                  Padding(
+                    padding: EdgeInsets.symmetric(vertical: 10)),
                   Text("Actions:",
                       style: TextStyle(
                         fontSize: 18, 

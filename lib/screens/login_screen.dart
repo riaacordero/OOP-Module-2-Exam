@@ -22,7 +22,8 @@ class LoginScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    SizedBox(height: 9,),
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 5)),
                     Image.asset('assets/login.png',
                     width: 350,height:350,alignment: Alignment.center),
                     Column(children: [
@@ -34,7 +35,8 @@ class LoginScreen extends StatelessWidget {
                         ),
                         textAlign: TextAlign.center,
                       ),
-                      SizedBox(height: 10),
+                      Padding(
+                        padding: EdgeInsets.symmetric(vertical: 3)),
                       Text("Mobile banking has never been this whizzy!",
                         style: TextStyle(
                             color: Colors.indigo,
@@ -88,7 +90,8 @@ class LoginFormState extends State<LoginForm> {
                 ),
                 validator: (value) => value == "admin" ? null : ''
               ),
-              SizedBox(height: 10),
+              Padding(
+                      padding: EdgeInsets.symmetric(vertical: 5)),
               TextFormField(
                   obscureText: true,
                   decoration: InputDecoration(
@@ -104,7 +107,8 @@ class LoginFormState extends State<LoginForm> {
                   ),
                   validator: (value) => value == "admin" ? null : ''
               ),
-              SizedBox(height: 10),
+              Padding(
+                      padding: EdgeInsets.symmetric(vertical: 5)),
               Container(
                   width: double.infinity,
                   child: Padding(
