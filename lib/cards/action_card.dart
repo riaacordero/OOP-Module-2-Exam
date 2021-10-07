@@ -31,14 +31,7 @@ class _ActionCardState extends State<ActionCard> {
         borderRadius: BorderRadius.circular(8),
         border: Border.all(color: Colors.indigo),
         color: Colors.white,
-        // boxShadow: [
-        //   BoxShadow(
-        //       color: Colors.grey,
-        //       blurRadius: 1,
-        //       spreadRadius: 0.1,
-        //       offset: Offset(2, 2)
-        //   )
-        // ],
+
       ),
       child: Padding(
         padding: const EdgeInsets.all(16.0),
