@@ -21,18 +21,6 @@ class HomeScreen extends StatelessWidget {
               child: ListView(
                 physics: ClampingScrollPhysics(),
                 children: [
-                  // MENU BAR
-                  Container(
-                    child: Row(
-                      children: [
-                        Icon(
-                          Icons.menu_rounded,
-                          color: Colors.grey[400],
-                          size: 40,
-                        )
-                      ],
-                    ),
-                  ),
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 10)),
                   // HEADER
@@ -45,7 +33,7 @@ class HomeScreen extends StatelessWidget {
                                 fontWeight: FontWeight.w500
                             )
                         ),
-                        Text("Johnny Bravo",
+                        Text("Juan dela Cruz",
                             style: TextStyle(
                                 color: Colors.indigo[700],
                                 fontSize: 30,
@@ -60,7 +48,7 @@ class HomeScreen extends StatelessWidget {
                     height: 199,
                     child: AccountsCard()),
                   Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 10)),
+                    padding: const EdgeInsets.symmetric(vertical: 20)),
                   Text("Actions:",
                       style: TextStyle(
                         fontSize: 18, 
@@ -101,7 +89,7 @@ class HomeScreen extends StatelessWidget {
                       Container(
                         width: double.infinity,
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 15),
+                          padding: const EdgeInsets.symmetric(vertical: 20),
                           child: ElevatedButton(
                             onPressed: () {
                               Navigator.push(
