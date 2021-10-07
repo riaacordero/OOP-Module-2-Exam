@@ -20,4 +20,4 @@ class Transaction {
   });
 }
 
-List<Transaction> transactions = new List.empty();
+List<Transaction> transactions = [];
