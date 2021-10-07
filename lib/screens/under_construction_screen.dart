@@ -44,7 +44,11 @@ class UnderConstructionScreen extends StatelessWidget {
                   'This feature is under construction.'+
                   '\n We apologize for this inconvenience and'+
                   '\nthank you for your support!',
-                  style: TextStyle(fontSize: 13, color: Colors.white),textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 13, 
+                    color: Colors.white
+                  ),
+                  textAlign: TextAlign.center,
                 ),
               ),
             ],

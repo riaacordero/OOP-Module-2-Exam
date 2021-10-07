@@ -71,7 +71,8 @@ class HomeScreen extends StatelessWidget {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => actions[index].navigateTo()));
+                                          builder: (context) => 
+                                          actions[index].navigateTo()));
                                 },
                                 child: ActionCard(
                                     action: actions[index].action,
@@ -95,7 +96,8 @@ class HomeScreen extends StatelessWidget {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => UnderConstructionScreen()
+                                      builder: (context) => 
+                                      UnderConstructionScreen()
                                   )
                               );
                             },
