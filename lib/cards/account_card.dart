@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:whizbank/database/accounts.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+int selectedCardIndex = -1;
+
 class _AccountCard extends StatefulWidget {
   final Account account;
 
@@ -18,7 +20,6 @@ class _AccountCardState extends State<_AccountCard> {
   @override
   Widget build(BuildContext context) {
       return Container(
-        margin: const EdgeInsets.only(right: 10),
         height: 175,
         width: MediaQuery.of(context).size.width - 36,
         decoration: BoxDecoration(
@@ -127,6 +128,57 @@ class _AccountCardCarouselState extends State<AccountCardCarousel> {
           ),
         )
       ],
+    );
+  }
+}
+
+class AccountCardList extends StatefulWidget {
+  const AccountCardList({Key? key}) : super(key: key);
+
+  @override
+  State<StatefulWidget> createState() => _AccountCardListState();
+}
+
+class _AccountCardListState extends State<AccountCardList> {
+  @override
+  Widget build(BuildContext context) {
+    return ListView.separated(
+      itemCount: accounts.length,
+      separatorBuilder: (context, index) => SizedBox(height: 16),
+      physics: ScrollPhysics(),
+      shrinkWrap: true,
+      itemBuilder: (context, index) {
+        return Stack(
+          children: [
+            GestureDetector(
+              child: _AccountCard(account: accounts[index]),
+              onTap: () => setState(() => (selectedCardIndex = index))
+            ),
+            Visibility(
+              visible: selectedCardIndex == index,
+              child: Stack(
+                children: [
+                  Icon(
+                    Icons.check_circle_rounded,
+                    color: Colors.lightGreenAccent,
+                    size: 25,
+                  ),
+                  Container(
+                    height: 175,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30),
+                      border: Border.all(
+                        color: Colors.lightGreenAccent,
+                        width: 3
+                      )
+                    ),
+                  )
+                ],
+              )
+            )
+          ]
+        );
+      },
     );
   }
 }
