@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:whizbank/cards/account_card.dart';
 import 'package:whizbank/database/accounts.dart';
+import 'package:whizbank/database/transactions.dart';
 import 'package:whizbank/screens/dashboard_screen.dart';
 
 class TransferScreen extends StatefulWidget {
@@ -13,10 +14,12 @@ class TransferScreen extends StatefulWidget {
 class TransferScreenState extends State<TransferScreen> {
   final _formKey = new GlobalKey<FormState>();
   final _scrollController = new ScrollController();
+  final TextEditingController _toController = new TextEditingController();
   final TextEditingController _amountController = new TextEditingController();
 
   @override
   void dispose() {
+    _toController.dispose();
     _amountController.dispose();
     super.dispose();
   }
@@ -65,6 +68,7 @@ class TransferScreenState extends State<TransferScreen> {
                       ),
                     ),
                     TextFormField(
+                      controller: _toController,
                       keyboardType: TextInputType.number,
                       maxLength: 12,
                       decoration: InputDecoration(
@@ -96,7 +100,9 @@ class TransferScreenState extends State<TransferScreen> {
                             fontSize: 16
                           ),
                         ),
-                        Padding(padding: const EdgeInsets.symmetric(horizontal: 20)),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 20)
+                        ),
                         Flexible(
                           child: TextFormField(
                             controller: _amountController,
@@ -129,9 +135,18 @@ class TransferScreenState extends State<TransferScreen> {
                             _scrollController.jumpTo(0);
                           } else {
                             if (_formKey.currentState!.validate()) {
-                              print("Amount text: " + _amountController.text);
                               accounts[selectedCardIndex].balance -= 
                                 double.parse(_amountController.text);
+                              
+                              transactions.add(
+                                new Transaction(
+                                  accFrom: accounts[selectedCardIndex], 
+                                  accTo: _toController.text, 
+                                  amount: double.parse(_amountController.text), 
+                                  type: TransactionType.TRANSFER, 
+                                  dateTime: DateTime.now()
+                                )
+                              );
 
                               Navigator.push(
                                 context, 
