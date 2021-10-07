@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whizbank/screens/dashboard_screen.dart';
+import 'package:whizbank/screens/under_construction_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -7,21 +8,26 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SingleChildScrollView(
-          child: Container(
-              decoration: BoxDecoration(
-                color: Colors.white
-              ),
-              child: Padding(
+        body: Container(
+          decoration: BoxDecoration(
+            color: Colors.white
+          ),
+          child: SingleChildScrollView(
+            child: Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Padding(
-                      padding: EdgeInsets.symmetric(vertical: 5)),
-                    Image.asset('assets/login.png',
-                    width: 350,height:350,alignment: Alignment.center),
+                    Padding(padding: const EdgeInsets.symmetric(vertical: 25)),
+                    Container(
+                      constraints: BoxConstraints(
+                        maxHeight: MediaQuery.of(context).size.height,
+                        maxWidth: MediaQuery.of(context).size.width),
+                      child: Image.asset('assets/login.png',
+                      alignment: Alignment.center),
+                    ),
+                    Padding(padding: const EdgeInsets.only(top: 50)),
                     Column(children: [
                       Text("Welcome to Whizbank",
                         style: TextStyle(
@@ -44,7 +50,7 @@ class LoginScreen extends StatelessWidget {
                     LoginForm()
                   ],
                 ),
-              )
+              ),
           ),
         )
     );
@@ -155,7 +161,7 @@ class LoginFormState extends State<LoginForm> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => LoginScreen()
+                                    builder: (context) => UnderConstructionScreen()
                                 )
                             );
                           },
