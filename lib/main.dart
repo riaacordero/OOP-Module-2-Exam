@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:whizbank/screens/splash_screen.dart';
+import 'package:whizbank/screens/login_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
             GoogleFonts.sourceCodeProTextTheme(Theme.of(context).textTheme),
         primarySwatch: Colors.indigo,
       ),
-      home: SplashScreen(),
+      home: LoginScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
