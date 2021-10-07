@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:whizbank/screens/transfer_screen.dart';
 import 'package:whizbank/screens/under_construction_screen.dart';
 
 class Actions {
@@ -12,7 +13,7 @@ class Actions {
 
 var actions = [
   Actions(
-    "Fund\nTransfer", "assets/col-transfer.svg", () => UnderConstructionScreen()),
+    "Fund\nTransfer", "assets/col-transfer.svg", () => TransferScreen()),
 
   Actions(
     "Cash\nWithdraw", "assets/col-money.svg", () => UnderConstructionScreen()),
