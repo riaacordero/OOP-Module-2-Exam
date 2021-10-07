@@ -9,10 +9,6 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
         body: SingleChildScrollView(
           child: Container(
-              constraints: BoxConstraints(
-                maxHeight: MediaQuery.of(context).size.height,
-                maxWidth: MediaQuery.of(context).size.width,
-              ),
               decoration: BoxDecoration(
                 color: Colors.white
               ),
