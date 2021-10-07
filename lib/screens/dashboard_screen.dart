@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:whizbank/cards/account_card.dart';
 import 'package:whizbank/cards/action_card.dart';
 import 'package:whizbank/database/actions.dart';
+import 'package:whizbank/screens/transaction_screen.dart';
 import 'package:whizbank/screens/under_construction_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -96,7 +97,7 @@ class HomeScreen extends StatelessWidget {
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) => 
-                                      UnderConstructionScreen()
+                                      TransactionScreen()
                                   )
                               );
                             },
