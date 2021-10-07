@@ -24,7 +24,7 @@ class _ActionCardState extends State<ActionCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 4,vertical: 16),
+      margin: const EdgeInsets.symmetric(horizontal: 4,vertical: 16),
       width: 125,
       height: 125,
       decoration: BoxDecoration(

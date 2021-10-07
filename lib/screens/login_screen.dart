@@ -38,7 +38,7 @@ class LoginScreen extends StatelessWidget {
                         textAlign: TextAlign.center,
                       ),
                       Padding(
-                        padding: EdgeInsets.symmetric(vertical: 3)),
+                        padding: const EdgeInsets.symmetric(vertical: 3)),
                       Text("Mobile banking has never been this whizzy!",
                         style: TextStyle(
                             color: Colors.indigo,
@@ -93,7 +93,7 @@ class LoginFormState extends State<LoginForm> {
                 validator: (value) => value == "admin" ? null : ''
               ),
               Padding(
-                      padding: EdgeInsets.symmetric(vertical: 5)),
+                      padding: const EdgeInsets.symmetric(vertical: 5)),
               TextFormField(
                   obscureText: true,
                   decoration: InputDecoration(
@@ -110,7 +110,7 @@ class LoginFormState extends State<LoginForm> {
                   validator: (value) => value == "admin" ? null : ''
               ),
               Padding(
-                      padding: EdgeInsets.symmetric(vertical: 5)),
+                      padding: const EdgeInsets.symmetric(vertical: 5)),
               Container(
                   width: double.infinity,
                   child: Padding(

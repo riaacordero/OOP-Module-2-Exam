@@ -16,7 +16,7 @@ class _AccountsCardState extends State<AccountsCard> {
         itemCount: accounts.length,
         itemBuilder: (context, index) {
           return Container(
-            margin: EdgeInsets.only(right: 10),
+            margin: const EdgeInsets.only(right: 10),
             height: 199,
             width: 344,
             decoration: BoxDecoration(

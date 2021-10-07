@@ -15,7 +15,7 @@ class HomeScreen extends StatelessWidget {
           decoration: BoxDecoration(
             color: Colors.white
           ),
-            margin: EdgeInsets.only(top: 8),
+            margin: const EdgeInsets.only(top: 8),
             child: Padding(
               padding: const EdgeInsets.all(18),
               child: ListView(
@@ -34,7 +34,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(vertical: 10)),
+                    padding: const EdgeInsets.symmetric(vertical: 10)),
                   // HEADER
                   Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -55,12 +55,12 @@ class HomeScreen extends StatelessWidget {
                       ]
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(vertical: 10)),
+                    padding: const EdgeInsets.symmetric(vertical: 10)),
                   Container(
                     height: 199,
                     child: AccountsCard()),
                   Padding(
-                    padding: EdgeInsets.symmetric(vertical: 10)),
+                    padding: const EdgeInsets.symmetric(vertical: 10)),
                   Text("Actions:",
                       style: TextStyle(
                         fontSize: 18, 
