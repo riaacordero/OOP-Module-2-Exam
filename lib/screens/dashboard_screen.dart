@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whizbank/cards/accounts_card.dart';
+import 'package:whizbank/cards/account_card.dart';
 import 'package:whizbank/cards/action_card.dart';
 import 'package:whizbank/database/actions.dart';
 import 'package:whizbank/database/accounts.dart';
@@ -45,8 +45,8 @@ class HomeScreen extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 10)),
                   Container(
-                    height: 199,
-                    child: AccountsCard()),
+                    child: AccountCardCarousel()
+                  ),
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 20)),
                   Text("Actions:",

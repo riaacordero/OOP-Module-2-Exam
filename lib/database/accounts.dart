@@ -1,14 +1,14 @@
-class Accounts {
+class Account {
   String user;
   String accNumber; //max 11 char
   double balance;
 
-  Accounts(this.user, this.accNumber, this.balance);
+  Account(this.user, this.accNumber, this.balance);
 }
 
-List<Accounts> accounts = accountsData
+List<Account> accounts = accountsData
     .map(
-      (item) => Accounts(
+      (item) => Account(
           item['user'] as String,
           item['accNumber'] as String,
           item['balance'] as double,
@@ -19,11 +19,11 @@ var accountsData = [
   {
     "user": "Lorem Ipsum",
     "accNumber": "00023678234",
-    "balance": 15080.59,
+    "balance": 100000.00,
   },
   {
     "user": "Lorem Ipsum",
     "accNumber": "98675346875",
-    "balance": 200.00,
+    "balance": 100000.00,
   }
 ];
