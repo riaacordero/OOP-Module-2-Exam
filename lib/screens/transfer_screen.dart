@@ -151,7 +151,7 @@ class TransferScreenState extends State<TransferScreen> {
                               Navigator.push(
                                 context, 
                                 MaterialPageRoute(
-                                  builder: (context) => HomeScreen()
+                                  builder: (context) => SuccessScreen()
                                 )
                               );
 
@@ -182,6 +182,53 @@ class TransferScreenState extends State<TransferScreen> {
           ),
         ),
       )
+    );
+  }
+}
+
+class SuccessScreen extends StatefulWidget {
+  const SuccessScreen({ Key? key }) : super(key: key);
+
+  @override
+  _SuccessScreenState createState() => _SuccessScreenState();
+}
+
+class _SuccessScreenState extends State<SuccessScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: new AppBar(
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.indigo,
+        elevation: 0,
+      ),
+      body: Container(
+        decoration: BoxDecoration(color: Colors.white),
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Flex(
+            direction: Axis.vertical,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Icon(Icons.check_circle_outline,
+              color: Colors.greenAccent,
+              size: 100,),
+              Padding(padding: const EdgeInsets.symmetric(vertical: 10)),
+              Text("Money transfer successful!",style: TextStyle(
+                fontSize: 15, fontWeight: FontWeight.w600
+              )),
+              Padding(padding: const EdgeInsets.symmetric(vertical: 5)),
+              Text("You successfully transferred <AMOUNT> from <YOUR_ACC> to <RECIPIENT_ACC>.", textAlign: TextAlign.center,),
+              Padding(padding: const EdgeInsets.symmetric(vertical: 5)),
+              Text("Ref. No.: <REF_NO>", textAlign: TextAlign.center,),
+
+            ]
+          ),
+        )
+      )      
     );
   }
 }
