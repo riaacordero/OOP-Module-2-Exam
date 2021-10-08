@@ -39,7 +39,9 @@ class TransactionScreen extends StatelessWidget {
                     color: Colors.grey),
                     textAlign: TextAlign.center,),
                   Padding(padding: const EdgeInsets.symmetric(vertical:5)),
-                  Text("Your transaction history is currently empty. It's either you have no friends or no money :(",style: TextStyle(
+                  Text("Your transaction history is currently empty. " +
+                    "It's either you have no friends or no money :("
+                    ,style: TextStyle(
                     fontSize: 15,
                     color: Colors.grey),
                     textAlign: TextAlign.center,),

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:whizbank/cards/account_card.dart';
 import 'package:whizbank/database/accounts.dart';
@@ -230,6 +231,30 @@ class _SuccessScreenState extends State<SuccessScreen> {
               Text("Ref. No.: ${widget.transaction.referenceNumber}"
                 , textAlign: TextAlign.center,
               ),
+              Padding(padding: const EdgeInsets.symmetric(vertical: 25)),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context, 
+                    MaterialPageRoute(
+                      builder: (context) => HomeScreen()
+                    )
+                  );
+                }, 
+                child: Text("Back to Home",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16
+                  ),
+                ),
+                style: ButtonStyle(
+                  shape: MaterialStateProperty.all(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18)
+                    )
+                  )
+                ),
+              )
             ]
           ),
         )
