@@ -23,7 +23,7 @@ class _AccountCardState extends State<_AccountCard> {
         height: 175,
         width: MediaQuery.of(context).size.width - 36,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(30),
+            borderRadius: BorderRadius.circular(15),
             gradient: LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
@@ -114,7 +114,10 @@ class _AccountCardCarouselState extends State<AccountCardCarousel> {
             scrollDirection: Axis.horizontal,
             itemCount: accounts.length,
             itemBuilder: (context, index) {
-              return _AccountCard(account: accounts[index]);
+              return Padding(
+                padding: const EdgeInsets.only(right: 10.0),
+                child: _AccountCard(account: accounts[index]),
+              );
             },
           ),
         ),
@@ -123,8 +126,8 @@ class _AccountCardCarouselState extends State<AccountCardCarousel> {
           controller: _pageController, 
           count: accounts.length,
           effect: WormEffect(
-            dotWidth: 12,
-            dotHeight: 12
+            dotWidth: 8,
+            dotHeight: 8
           ),
         )
       ],
@@ -158,17 +161,21 @@ class _AccountCardListState extends State<AccountCardList> {
               visible: selectedCardIndex == index,
               child: Stack(
                 children: [
-                  Icon(
-                    Icons.check_circle_rounded,
-                    color: Colors.lightGreenAccent,
-                    size: 25,
+                  Positioned(
+                    top: 10,
+                    right: 10,
+                    child: Icon(
+                      Icons.check_circle_rounded,
+                      color: Colors.greenAccent,
+                      size: 35,
+                    ),
                   ),
                   Container(
                     height: 175,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(30),
+                      borderRadius: BorderRadius.circular(15),
                       border: Border.all(
-                        color: Colors.lightGreenAccent,
+                        color: Colors.greenAccent,
                         width: 3
                       )
                     ),
