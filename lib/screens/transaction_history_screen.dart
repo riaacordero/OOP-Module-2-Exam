@@ -87,7 +87,8 @@ class TransactionScreen extends StatelessWidget {
                           title: Text(
                             "FROM: ${currentTransaction.accFrom.accNumber}\n" +
                             "TO: ${currentTransaction.accTo}\n" +
-                            "AMOUNT: ${currentTransaction.amount}"
+                            "AMOUNT: ${currentTransaction.amount}\n" +
+                            "REF. NUMBER: ${currentTransaction.referenceNumber}"
                           ),
                         )
                       ],
