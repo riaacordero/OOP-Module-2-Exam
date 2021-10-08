@@ -118,6 +118,8 @@ class TransferScreenState extends State<TransferScreen> {
                               } else if (double.parse(value) > 
                                   accounts[selectedCardIndex].balance) {
                                   return "Not enough balance.";
+                              } else if (double.parse(value) < 200) {
+                                return "Not enough amount.";
                               } else {
                                 return null;
                               }
