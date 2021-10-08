@@ -5,8 +5,8 @@ import 'package:whizbank/database/actions.dart';
 import 'package:whizbank/screens/transaction_history_screen.dart';
 import 'package:whizbank/screens/under_construction_screen.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class DashboardScreen extends StatelessWidget {
+  const DashboardScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

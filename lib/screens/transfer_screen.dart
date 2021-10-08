@@ -237,7 +237,7 @@ class _SuccessScreenState extends State<SuccessScreen> {
                   Navigator.push(
                     context, 
                     MaterialPageRoute(
-                      builder: (context) => HomeScreen()
+                      builder: (context) => DashboardScreen()
                     )
                   );
                 }, 

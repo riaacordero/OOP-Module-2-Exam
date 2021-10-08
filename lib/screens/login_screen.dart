@@ -124,7 +124,7 @@ class _LoginFormState extends State<_LoginForm> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => HomeScreen()
+                                        builder: (context) => DashboardScreen()
                                     )
                                 );
                               } else {

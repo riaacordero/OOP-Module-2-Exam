@@ -6,7 +6,7 @@ class ActionCard extends StatefulWidget {
   final String action;
   final String icon;
   final bool isSelected;
-  HomeScreen context;
+  DashboardScreen context;
 
   ActionCard({
     required this.action,
