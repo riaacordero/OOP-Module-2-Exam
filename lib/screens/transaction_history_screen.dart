@@ -31,22 +31,18 @@ class TransactionScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: 
-                  [Column(
-                    children: [
-                      SvgPicture.asset('assets/empty-transact.svg'),
-                      Padding(padding: const EdgeInsets.symmetric(vertical:15)),
-                      Text("Sike!",style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.grey),
-                        textAlign: TextAlign.center,),
-                      Padding(padding: const EdgeInsets.symmetric(vertical:5)),
-                      Text("Your transaction history is currently empty. It's either you have no friends or no money :(",style: TextStyle(
-                        fontSize: 15,
-                        color: Colors.grey),
-                        textAlign: TextAlign.center,)
-                    ],
-                  ),
+                  [SvgPicture.asset('assets/empty-transact.svg'),
+                  Padding(padding: const EdgeInsets.symmetric(vertical:15)),
+                  Text("Sike!",style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.grey),
+                    textAlign: TextAlign.center,),
+                  Padding(padding: const EdgeInsets.symmetric(vertical:5)),
+                  Text("Your transaction history is currently empty. It's either you have no friends or no money :(",style: TextStyle(
+                    fontSize: 15,
+                    color: Colors.grey),
+                    textAlign: TextAlign.center,),
                 ],
               ),
             )
