@@ -154,14 +154,6 @@ class TransferScreenState extends State<TransferScreen> {
                                   builder: (context) => SuccessScreen()
                                 )
                               );
-
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(
-                                  content: Text(
-                                    "Money successfully transferred."
-                                  )
-                                )
-                              );
                             }                            
                           }
                         },
