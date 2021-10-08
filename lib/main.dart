@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:whizbank/screens/login_screen.dart';
 
 void main() {
@@ -13,8 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Whizbank',
       theme: ThemeData(
-        textTheme:
-            GoogleFonts.sourceCodeProTextTheme(Theme.of(context).textTheme),
+        fontFamily: 'Source Code Pro',
         primarySwatch: Colors.indigo,
       ),
       home: LoginScreen(),

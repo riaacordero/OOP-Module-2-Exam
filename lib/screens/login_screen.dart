@@ -33,7 +33,7 @@ class LoginScreen extends StatelessWidget {
                         style: TextStyle(
                           color: Colors.indigo,
                           fontSize: 25,
-                          fontWeight: FontWeight.w900,
+                          fontWeight: FontWeight.w700,
                         ),
                         textAlign: TextAlign.center,
                       ),
