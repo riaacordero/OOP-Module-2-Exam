@@ -138,20 +138,23 @@ class TransferScreenState extends State<TransferScreen> {
                               accounts[selectedCardIndex].balance -= 
                                 double.parse(_amountController.text);
                               
-                              transactions.add(
-                                new Transaction(
-                                  accFrom: accounts[selectedCardIndex], 
-                                  accTo: _toController.text, 
-                                  amount: double.parse(_amountController.text), 
-                                  type: TransactionType.TRANSFER, 
-                                  dateTime: DateTime.now()
-                                )
+                              Transaction newTransaction = new Transaction(
+                                accFrom: accounts[selectedCardIndex], 
+                                accTo: _toController.text, 
+                                amount: double.parse(_amountController.text), 
+                                type: TransactionType.TRANSFER, 
+                                dateTime: DateTime.now()
                               );
+
+                              transactions.add(newTransaction);
 
                               Navigator.push(
                                 context, 
                                 MaterialPageRoute(
-                                  builder: (context) => SuccessScreen()
+                                  builder: (context) 
+                                  => SuccessScreen(
+                                    transaction: newTransaction,
+                                  )
                                 )
                               );
                             }                            
@@ -179,7 +182,9 @@ class TransferScreenState extends State<TransferScreen> {
 }
 
 class SuccessScreen extends StatefulWidget {
-  const SuccessScreen({ Key? key }) : super(key: key);
+  final Transaction transaction;
+
+  const SuccessScreen({required this.transaction, Key? key }) : super(key: key);
 
   @override
   _SuccessScreenState createState() => _SuccessScreenState();
@@ -213,10 +218,16 @@ class _SuccessScreenState extends State<SuccessScreen> {
                 fontSize: 15, fontWeight: FontWeight.w600
               )),
               Padding(padding: const EdgeInsets.symmetric(vertical: 5)),
-              Text("You successfully transferred <AMOUNT> from <YOUR_ACC> to <RECIPIENT_ACC>.", textAlign: TextAlign.center,),
+              Text("You successfully transferred " + 
+                "${widget.transaction.amount} " + 
+                "from ${widget.transaction.accFrom.accNumber} to " + 
+                "${widget.transaction.accTo}.", 
+                textAlign: TextAlign.center,
+              ),
               Padding(padding: const EdgeInsets.symmetric(vertical: 5)),
-              Text("Ref. No.: <REF_NO>", textAlign: TextAlign.center,),
-
+              Text("Ref. No.: ${widget.transaction.referenceNumber}"
+                , textAlign: TextAlign.center,
+              ),
             ]
           ),
         )
